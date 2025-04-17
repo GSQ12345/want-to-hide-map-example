@@ -1,8 +1,40 @@
-[gd_scene load_steps=2 format=3 uid="uid://uag6bx6x7trm"]
+[gd_scene load_steps=9 format=3 uid="uid://uag6bx6x7trm"]
 
 [ext_resource type="Script" uid="uid://hvvc05gfco0s" path="res://scripts/exporter.gd" id="1_o5qli"]
+[ext_resource type="PackedScene" uid="uid://sqpnsdgcjxr8" path="res://look here/Interactables/flashlight.tscn" id="2_tefeu"]
+[ext_resource type="PackedScene" uid="uid://c2tjwvs0ik6lw" path="res://look here/Interactables/generator.tscn" id="3_o6xl0"]
+[ext_resource type="PackedScene" uid="uid://doqtxv54r57w8" path="res://look here/Interactables/door.tscn" id="4_tipki"]
+[ext_resource type="PackedScene" uid="uid://clr0u6mv7n2ap" path="res://look here/Interactables/color generator or smt.tscn" id="5_85g3d"]
+[ext_resource type="PackedScene" uid="uid://dugncj4vihatx" path="res://look here/Interactables/gun.tscn" id="6_choun"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_o5qli"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0wfyh"]
 
 [node name="main" type="Node3D"]
-
-[node name="Exporter" type="Node" parent="."]
 script = ExtResource("1_o5qli")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(25, 0, 0, 0, 0.1, 0, 0, 0, 25, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_o5qli")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_0wfyh")
+debug_fill = false
+
+[node name="flashlight" parent="." instance=ExtResource("2_tefeu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.06039, 1.02194, -9.02223)
+
+[node name="generator" parent="." instance=ExtResource("3_o6xl0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.426591, 0.515604, -8.5065)
+
+[node name="Door" parent="." instance=ExtResource("4_tipki")]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, -3.16384, 0.05, -6.14983)
+
+[node name="part a" parent="." instance=ExtResource("5_85g3d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.26907, 0.05, -6.41023)
+
+[node name="gun" parent="." instance=ExtResource("6_choun")]
+transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, 5.39651, 1.41362, -7.64106)
