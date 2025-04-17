@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://sqpnsdgcjxr8"]
+
+[ext_resource type="Script" path="res://scripts/pickup_flashlight.gd" id="1_66fu0"]
+[ext_resource type="Material" path="res://materials/metal.tres" id="1_o3a3c"]
+[ext_resource type="Material" path="res://materials/darkerlight.tres" id="2_uuh5r"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_brrpc"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_7li02"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_5tuxb"]
+
+[node name="flashlight" type="StaticBody3D"]
+script = ExtResource("1_66fu0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.18557e-08, -0.6, 0, 0.5, -2.62268e-08, 0, 0, 0, 0.5, 0, 0, 0)
+material_override = ExtResource("1_o3a3c")
+mesh = SubResource("CylinderMesh_brrpc")
+
+[node name="MeshInstance3D2" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.40413e-08, -0.12, 0, 0.55, -5.24537e-09, 0, 0, 0, 0.55, -0.725497, 0, 0)
+material_override = ExtResource("1_o3a3c")
+mesh = SubResource("CylinderMesh_7li02")
+
+[node name="MeshInstance3D3" type="MeshInstance3D" parent="."]
+transform = Transform3D(-2.16371e-08, -0.12, 0, 0.495, -5.24537e-09, 0, 0, 0, 0.495, -0.733649, 0, 0)
+material_override = ExtResource("2_uuh5r")
+mesh = SubResource("CylinderMesh_7li02")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, -0.761975, 0, 0)
+visible = false
+light_energy = 1.323
+spot_range = 36.227
+spot_angle = 34.71
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(-2.90681e-08, -0.721, 0, 0.665, -3.15159e-08, 0, 0, 0, 0.665, -0.144087, 0, 0)
+shape = SubResource("CylinderShape3D_5tuxb")

@@ -1,0 +1,39 @@
+[gd_scene load_steps=9 format=3 uid="uid://clr0u6mv7n2ap"]
+
+[ext_resource type="Script" uid="uid://xmqquav25v44" path="res://reuseable/open door/b.gd" id="1_86x7i"]
+[ext_resource type="Material" uid="uid://cc7agq7efrvmy" path="res://reuseable/open door/materials/a.tres" id="1_pe0qr"]
+[ext_resource type="Script" uid="uid://dy34ptyx7w5bs" path="res://reuseable/open door/1.gd" id="2_aecxs"]
+[ext_resource type="Material" uid="uid://schis8uu8vni" path="res://reuseable/open door/materials/b.tres" id="2_s6ecb"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_s6y0o"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_q5fm0"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_8g8di"]
+material = ExtResource("2_s6ecb")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_30f5m"]
+
+[node name="part a" type="Node3D"]
+script = ExtResource("1_86x7i")
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 3, 0, 0, 0, 1, 0, 1.5, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+material_override = ExtResource("1_pe0qr")
+mesh = SubResource("BoxMesh_s6y0o")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_q5fm0")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0, 1.97585, 0)
+script = ExtResource("2_aecxs")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2"]
+material_override = ExtResource("2_s6ecb")
+mesh = SubResource("SphereMesh_8g8di")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+shape = SubResource("SphereShape3D_30f5m")

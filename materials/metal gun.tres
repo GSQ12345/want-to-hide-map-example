@@ -1,0 +1,13 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cdec0rdqv5xa4"]
+
+[ext_resource type="Texture2D" uid="uid://xu7ls3gf01lv" path="res://textures/wall.png" id="1_udlvt"]
+
+[resource]
+albedo_color = Color(0.559906, 0.716308, 0.815457, 1)
+albedo_texture = ExtResource("1_udlvt")
+metallic = 1.0
+metallic_specular = 1.0
+roughness = 0.5
+roughness_texture_channel = 4
+emission = Color(0.340339, 0.340339, 0.340339, 1)
+uv1_scale = Vector3(30, 30, 30)

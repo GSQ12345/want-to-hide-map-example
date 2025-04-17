@@ -1,0 +1,11 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://cingnykhabxi3"]
+
+[ext_resource type="Texture2D" uid="uid://xu7ls3gf01lv" path="res://textures/wall.png" id="1_xpa8r"]
+
+[resource]
+shading_mode = 0
+disable_fog = true
+albedo_color = Color(0.0602982, 6.27475e-05, 0.12561, 1)
+albedo_texture = ExtResource("1_xpa8r")
+uv1_scale = Vector3(75, 75, 75)
+grow_amount = 2.263

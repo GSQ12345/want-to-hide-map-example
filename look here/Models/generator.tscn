@@ -1,0 +1,267 @@
+[gd_scene load_steps=16 format=3 uid="uid://bddhud3r1bl5p"]
+
+[ext_resource type="Material" path="res://materials/generatorrr.tres" id="3_ski4l"]
+[ext_resource type="Material" path="res://materials/generatorlight red.tres" id="4_ldddb"]
+[ext_resource type="Material" path="res://materials/generatorlight green.tres" id="5_plf2o"]
+[ext_resource type="Material" path="res://materials/generatorrr 2.tres" id="6_s8cfx"]
+[ext_resource type="Material" path="res://materials/generatorlight stage 0.tres" id="7_f8gra"]
+[ext_resource type="Material" path="res://materials/generatorlight stage 1.tres" id="8_u1cph"]
+[ext_resource type="Material" path="res://materials/generatorlight stage 2.tres" id="9_6b5ok"]
+[ext_resource type="Material" path="res://materials/generatorlight stage 3.tres" id="10_cgmmw"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_shfcb"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_wyhek"]
+
+[sub_resource type="SphereMesh" id="SphereMesh_h3odk"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_i7rv5"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_wts34"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_t7cai"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_kj0q8"]
+
+[node name="generator" type="Node3D"]
+
+[node name="main" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.931208, 0, 0, 0, 1, 0, 0, 0)
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="main"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.967536, 0, 0, 0)
+shape = SubResource("BoxShape3D_shfcb")
+debug_fill = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="main"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.967536, 0, 0, 0)
+material_override = ExtResource("3_ski4l")
+mesh = SubResource("BoxMesh_wyhek")
+
+[node name="light1a" type="Node3D" parent="."]
+
+[node name="red" type="StaticBody3D" parent="light1a"]
+transform = Transform3D(0.095, 0, 0, 0, 0.095, 0, 0, 0, 0.095, 0.443756, 0.448109, 0.437064)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="light1a/red"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.967536, 0, 0, 0)
+material_override = ExtResource("4_ldddb")
+mesh = SubResource("SphereMesh_h3odk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="light1a/red"]
+shape = SubResource("SphereShape3D_i7rv5")
+debug_fill = false
+
+[node name="green" type="StaticBody3D" parent="light1a"]
+transform = Transform3D(0.095, 0, 0, 0, 0.095, 0, 0, 0, 0.095, 0.443756, 0.448109, 0.437064)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="light1a/green"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.967536, 0, 0, 0)
+material_override = ExtResource("5_plf2o")
+mesh = SubResource("SphereMesh_h3odk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="light1a/green"]
+shape = SubResource("SphereShape3D_i7rv5")
+debug_fill = false
+
+[node name="light2a" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.106782, 0, 0)
+
+[node name="red" type="StaticBody3D" parent="light2a"]
+transform = Transform3D(0.095, 0, 0, 0, 0.095, 0, 0, 0, 0.095, 0.443756, 0.448109, 0.437064)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="light2a/red"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.967536, 0, 0, 0)
+material_override = ExtResource("4_ldddb")
+mesh = SubResource("SphereMesh_h3odk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="light2a/red"]
+shape = SubResource("SphereShape3D_i7rv5")
+debug_fill = false
+
+[node name="green" type="StaticBody3D" parent="light2a"]
+transform = Transform3D(0.095, 0, 0, 0, 0.095, 0, 0, 0, 0.095, 0.443756, 0.448109, 0.437064)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="light2a/green"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.967536, 0, 0, 0)
+material_override = ExtResource("5_plf2o")
+mesh = SubResource("SphereMesh_h3odk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="light2a/green"]
+shape = SubResource("SphereShape3D_i7rv5")
+debug_fill = false
+
+[node name="light3a" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.219653, 0, 0)
+
+[node name="red" type="StaticBody3D" parent="light3a"]
+transform = Transform3D(0.095, 0, 0, 0, 0.095, 0, 0, 0, 0.095, 0.443756, 0.448109, 0.437064)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="light3a/red"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.967536, 0, 0, 0)
+material_override = ExtResource("4_ldddb")
+mesh = SubResource("SphereMesh_h3odk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="light3a/red"]
+shape = SubResource("SphereShape3D_i7rv5")
+debug_fill = false
+
+[node name="green" type="StaticBody3D" parent="light3a"]
+transform = Transform3D(0.095, 0, 0, 0, 0.095, 0, 0, 0, 0.095, 0.443756, 0.448109, 0.437064)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="light3a/green"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.967536, 0, 0, 0)
+material_override = ExtResource("5_plf2o")
+mesh = SubResource("SphereMesh_h3odk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="light3a/green"]
+shape = SubResource("SphereShape3D_i7rv5")
+debug_fill = false
+
+[node name="light3b" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.66049, 0, 0)
+
+[node name="red" type="StaticBody3D" parent="light3b"]
+transform = Transform3D(0.095, 0, 0, 0, 0.095, 0, 0, 0, 0.095, 0.443756, 0.448109, 0.437064)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="light3b/red"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.967536, 0, 0, 0)
+material_override = ExtResource("4_ldddb")
+mesh = SubResource("SphereMesh_h3odk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="light3b/red"]
+shape = SubResource("SphereShape3D_i7rv5")
+debug_fill = false
+
+[node name="green" type="StaticBody3D" parent="light3b"]
+transform = Transform3D(0.095, 0, 0, 0, 0.095, 0, 0, 0, 0.095, 0.443756, 0.448109, 0.437064)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="light3b/green"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.967536, 0, 0, 0)
+material_override = ExtResource("5_plf2o")
+mesh = SubResource("SphereMesh_h3odk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="light3b/green"]
+shape = SubResource("SphereShape3D_i7rv5")
+debug_fill = false
+
+[node name="light2b" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.767272, 0, 0)
+
+[node name="red" type="StaticBody3D" parent="light2b"]
+transform = Transform3D(0.095, 0, 0, 0, 0.095, 0, 0, 0, 0.095, 0.443756, 0.448109, 0.437064)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="light2b/red"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.967536, 0, 0, 0)
+material_override = ExtResource("4_ldddb")
+mesh = SubResource("SphereMesh_h3odk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="light2b/red"]
+shape = SubResource("SphereShape3D_i7rv5")
+debug_fill = false
+
+[node name="green" type="StaticBody3D" parent="light2b"]
+transform = Transform3D(0.095, 0, 0, 0, 0.095, 0, 0, 0, 0.095, 0.443756, 0.448109, 0.437064)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="light2b/green"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.967536, 0, 0, 0)
+material_override = ExtResource("5_plf2o")
+mesh = SubResource("SphereMesh_h3odk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="light2b/green"]
+shape = SubResource("SphereShape3D_i7rv5")
+debug_fill = false
+
+[node name="light1b" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.880143, 0, 0)
+
+[node name="red" type="StaticBody3D" parent="light1b"]
+transform = Transform3D(0.095, 0, 0, 0, 0.095, 0, 0, 0, 0.095, 0.443756, 0.448109, 0.437064)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="light1b/red"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.967536, 0, 0, 0)
+material_override = ExtResource("4_ldddb")
+mesh = SubResource("SphereMesh_h3odk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="light1b/red"]
+shape = SubResource("SphereShape3D_i7rv5")
+debug_fill = false
+
+[node name="green" type="StaticBody3D" parent="light1b"]
+transform = Transform3D(0.095, 0, 0, 0, 0.095, 0, 0, 0, 0.095, 0.443756, 0.448109, 0.437064)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="light1b/green"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.967536, 0, 0, 0)
+material_override = ExtResource("5_plf2o")
+mesh = SubResource("SphereMesh_h3odk")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="light1b/green"]
+shape = SubResource("SphereShape3D_i7rv5")
+debug_fill = false
+
+[node name="top" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.931208, 0, 0, 0, 1, 0, 2.05545, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="top"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 0.967536, 0, 0, 0)
+material_override = ExtResource("6_s8cfx")
+mesh = SubResource("BoxMesh_wyhek")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="top"]
+shape = SubResource("BoxShape3D_wts34")
+debug_fill = false
+
+[node name="button states" type="Node3D" parent="."]
+
+[node name="button 0" type="StaticBody3D" parent="button states"]
+transform = Transform3D(0.84, 0, 0, 0, 0.84, 0, 0, 0, 0.84, 0, 1.13469, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="button states/button 0"]
+material_override = ExtResource("7_f8gra")
+mesh = SubResource("CylinderMesh_t7cai")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="button states/button 0"]
+shape = SubResource("CylinderShape3D_kj0q8")
+debug_fill = false
+
+[node name="button red" type="StaticBody3D" parent="button states"]
+transform = Transform3D(0.84, 0, 0, 0, 0.84, 0, 0, 0, 0.84, 0, 1.13469, 0)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="button states/button red"]
+material_override = ExtResource("8_u1cph")
+mesh = SubResource("CylinderMesh_t7cai")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="button states/button red"]
+shape = SubResource("CylinderShape3D_kj0q8")
+debug_fill = false
+
+[node name="button yellow" type="StaticBody3D" parent="button states"]
+transform = Transform3D(0.84, 0, 0, 0, 0.84, 0, 0, 0, 0.84, 0, 1.13469, 0)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="button states/button yellow"]
+material_override = ExtResource("9_6b5ok")
+mesh = SubResource("CylinderMesh_t7cai")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="button states/button yellow"]
+shape = SubResource("CylinderShape3D_kj0q8")
+debug_fill = false
+
+[node name="button green" type="StaticBody3D" parent="button states"]
+transform = Transform3D(0.84, 0, 0, 0, 0.84, 0, 0, 0, 0.84, 0, 1.13469, 0)
+visible = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="button states/button green"]
+material_override = ExtResource("10_cgmmw")
+mesh = SubResource("CylinderMesh_t7cai")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="button states/button green"]
+shape = SubResource("CylinderShape3D_kj0q8")
+debug_fill = false

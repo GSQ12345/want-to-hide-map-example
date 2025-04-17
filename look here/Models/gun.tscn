@@ -1,0 +1,93 @@
+[gd_scene load_steps=6 format=3 uid="uid://dwve2uppkattm"]
+
+[ext_resource type="PackedScene" uid="uid://bcmpl7d1orudl" path="res://models/gun.glb" id="1_yxkph"]
+[ext_resource type="Material" path="res://materials/metal gun.tres" id="2_f2o25"]
+[ext_resource type="Material" path="res://materials/blue.tres" id="3_wal2b"]
+[ext_resource type="Material" path="res://materials/front.tres" id="4_jwtdj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_fmd8e"]
+
+[node name="gun" instance=ExtResource("1_yxkph")]
+transform = Transform3D(0.14, 0, 0, 0, 0.14, 0, 0, 0, 0.14, 0, 0, 0)
+
+[node name="Cube" parent="." index="0"]
+material_override = ExtResource("2_f2o25")
+cast_shadow = 0
+
+[node name="Cube_001" parent="." index="1"]
+material_override = ExtResource("3_wal2b")
+cast_shadow = 0
+
+[node name="Cube_002" parent="." index="2"]
+material_override = ExtResource("3_wal2b")
+cast_shadow = 0
+
+[node name="Cube_003" parent="." index="3"]
+material_override = ExtResource("3_wal2b")
+cast_shadow = 0
+
+[node name="Cube_004" parent="." index="4"]
+material_override = ExtResource("3_wal2b")
+cast_shadow = 0
+
+[node name="Cube_005" parent="." index="5"]
+material_override = ExtResource("3_wal2b")
+cast_shadow = 0
+
+[node name="Cube_006" parent="." index="6"]
+material_override = ExtResource("3_wal2b")
+cast_shadow = 0
+
+[node name="Cube_007" parent="." index="7"]
+material_override = ExtResource("3_wal2b")
+cast_shadow = 0
+
+[node name="Cube_008" parent="." index="8"]
+material_override = ExtResource("3_wal2b")
+cast_shadow = 0
+
+[node name="Cube_009" parent="." index="9"]
+material_override = ExtResource("3_wal2b")
+cast_shadow = 0
+
+[node name="Cube_010" parent="." index="10"]
+material_override = ExtResource("3_wal2b")
+cast_shadow = 0
+
+[node name="Cube_011" parent="." index="11"]
+material_override = ExtResource("3_wal2b")
+cast_shadow = 0
+
+[node name="Cube_012" parent="." index="12"]
+material_override = ExtResource("3_wal2b")
+cast_shadow = 0
+
+[node name="Cube_013" parent="." index="13"]
+material_override = ExtResource("3_wal2b")
+cast_shadow = 0
+
+[node name="Cube_014" parent="." index="14"]
+material_override = ExtResource("3_wal2b")
+cast_shadow = 0
+
+[node name="Cube_015" parent="." index="15"]
+material_override = ExtResource("3_wal2b")
+cast_shadow = 0
+
+[node name="Cube_016" parent="." index="16"]
+material_override = ExtResource("3_wal2b")
+cast_shadow = 0
+
+[node name="Cylinder" parent="." index="17"]
+material_override = ExtResource("4_jwtdj")
+cast_shadow = 0
+
+[node name="StaticBody3D" type="StaticBody3D" parent="." index="18"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" index="0"]
+transform = Transform3D(2.95405, 0, 0, 0, 3.0425, 0, 0, 0, 8.84986, 0, 4.22801, 2.81302)
+shape = SubResource("BoxShape3D_fmd8e")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="StaticBody3D" index="1"]
+transform = Transform3D(2.95405, 0, 0, 0, -1.32992e-07, -4.59171, 0, 3.0425, -2.0071e-07, 0, 2.25599, -0.104542)
+shape = SubResource("BoxShape3D_fmd8e")

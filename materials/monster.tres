@@ -1,0 +1,14 @@
+[gd_resource type="StandardMaterial3D" load_steps=2 format=3 uid="uid://b5xu4b43wre0v"]
+
+[ext_resource type="Texture2D" uid="uid://xu7ls3gf01lv" path="res://textures/wall.png" id="1_qgved"]
+
+[resource]
+albedo_color = Color(0.89059, 0.89059, 0.89059, 1)
+albedo_texture = ExtResource("1_qgved")
+metallic = 0.88
+metallic_specular = 1.0
+roughness = 0.3
+normal_scale = -5.11
+uv1_scale = Vector3(500, 500, 500)
+uv1_triplanar_sharpness = 32.6457
+uv1_world_triplanar = true
