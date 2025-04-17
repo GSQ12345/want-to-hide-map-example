@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bcmpl7d1orudl" path="res://models/gun.glb" id="1_u5v45"]
 [ext_resource type="Material" path="res://materials/blue.tres" id="3_ca5m6"]
 [ext_resource type="Material" path="res://materials/front.tres" id="4_bg8oa"]
-[ext_resource type="Script" uid="uid://cjousxibpi81m" path="res://scripts/gun.gd" id="5_cr4re"]
+[ext_resource type="Script" uid="uid://ci21rd2i480rf" path="res://scripts/gun 2.gd" id="5_cr4re"]
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_c82id"]
 

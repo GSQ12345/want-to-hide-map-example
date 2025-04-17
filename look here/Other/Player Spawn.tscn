@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://didcvrnsrw7lt"]
+
+[ext_resource type="Script" uid="uid://bd5jus36e6ro6" path="res://scripts/hide on export.gd" id="1_rbx1h"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_l5s3x"]
+
+[node name="PlayerSpawn" type="Node3D"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("CapsuleMesh_l5s3x")
+script = ExtResource("1_rbx1h")
