@@ -57,4 +57,3 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.96607, 0.58006, 7.33294)
 [node name="color generator or smt" parent="." instance=ExtResource("5_85g3d")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.8522, 0.0499996, -8.24015)
 Green = true
-correct = true
