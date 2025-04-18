@@ -5,10 +5,10 @@ extends Node3D
 
 var TriggerCutscene: bool = false
 
-var TriggerAnimation: AnimationPlayer
-var AnimationName: String
-var FreezePlayerWhileAnimation: bool
-var AnimationTime: float
+@export var TriggerAnimation: AnimationPlayer
+@export var AnimationName: String
+@export var FreezePlayerWhileAnimation: bool
+@export var AnimationTime: float
 var MonsterWalks: Node
 var MonsterWalkSpeed: float
 
