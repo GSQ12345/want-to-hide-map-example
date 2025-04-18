@@ -1,9 +1,9 @@
 [gd_scene load_steps=15 format=3 uid="uid://doqtxv54r57w8"]
 
 [ext_resource type="Script" uid="uid://lvmajq4h6y7s" path="res://scripts/door_parent.gd" id="1_1ubjo"]
-[ext_resource type="Script" uid="uid://di5t572rcvj0q" path="res://scripts/door.gd" id="1_7aqok"]
-[ext_resource type="Material" uid="uid://bodg3erfgibjf" path="res://materials/wood.tres" id="1_qw6kj"]
-[ext_resource type="Material" uid="uid://gornc4kngnh0" path="res://materials/metal.tres" id="2_hjtif"]
+[ext_resource type="Script" path="res://scripts/door.gd" id="1_7aqok"]
+[ext_resource type="Material" path="res://materials/wood.tres" id="1_qw6kj"]
+[ext_resource type="Material" path="res://materials/metal.tres" id="2_hjtif"]
 [ext_resource type="AudioStream" uid="uid://cvoa4tvxlok6p" path="res://sounds/door open.wav" id="5_cfg2n"]
 [ext_resource type="AudioStream" uid="uid://y4esms6kxpib" path="res://sounds/door locked.wav" id="6_u65vy"]
 

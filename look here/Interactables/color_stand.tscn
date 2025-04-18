@@ -1,0 +1,123 @@
+[gd_scene load_steps=14 format=3 uid="uid://cyc1x53i2yqfr"]
+
+[ext_resource type="Material" uid="uid://b44aqrdb0rw6y" path="res://materials/simple/color.tres" id="1_g58fp"]
+[ext_resource type="Script" uid="uid://lkjkjkjf7sk5" path="res://scripts/color from it.gd" id="2_7wgtf"]
+[ext_resource type="Script" uid="uid://cwpi5m36s1ggr" path="res://scripts/interact with color.gd" id="2_l4p3g"]
+[ext_resource type="Material" uid="uid://bwhdxu5y0rd6i" path="res://materials/simple/red.tres" id="3_ugpyv"]
+[ext_resource type="Material" uid="uid://c7gas3j3l4u4a" path="res://materials/simple/green.tres" id="4_ul8em"]
+[ext_resource type="Material" uid="uid://2jq1g304teoa" path="res://materials/simple/blue.tres" id="5_esd6a"]
+[ext_resource type="Script" uid="uid://ca8n28mujsoc2" path="res://scripts/trigger other.gd" id="7_rhlq0"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_lay0q"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_51mya"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_6y1fu"]
+height = 3.0
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_tfxtx"]
+height = 3.0
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_cwids"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_xprj0"]
+
+[node name="colorStand" type="Node3D"]
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3.2, 0, 0, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("BoxMesh_lay0q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("BoxShape3D_51mya")
+
+[node name="StaticBody3D5" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 3.2, 0, 2.42523, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D5"]
+mesh = SubResource("BoxMesh_lay0q")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D5"]
+shape = SubResource("BoxShape3D_51mya")
+
+[node name="colorer" type="StaticBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -4.37114e-08, 1, 0, -1, -4.37114e-08, 0.185582, 2.42523, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="colorer"]
+material_override = ExtResource("1_g58fp")
+mesh = SubResource("CapsuleMesh_6y1fu")
+script = ExtResource("2_7wgtf")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="colorer"]
+shape = SubResource("CapsuleShape3D_tfxtx")
+
+[node name="red" type="StaticBody3D" parent="."]
+transform = Transform3D(0.99, 0, 0, 0, 0.762, 0, 0, 0, 0.99, 0, 1.19626, 1.0615)
+script = ExtResource("2_l4p3g")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="red"]
+material_override = ExtResource("3_ugpyv")
+mesh = SubResource("CylinderMesh_cwids")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="red"]
+shape = SubResource("CylinderShape3D_xprj0")
+
+[node name="green" type="StaticBody3D" parent="."]
+transform = Transform3D(0.99, 0, 0, 0, 0.762, 0, 0, 0, 0.99, 0, 1.19626, 0.0614986)
+script = ExtResource("2_l4p3g")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="green"]
+material_override = ExtResource("4_ul8em")
+mesh = SubResource("CylinderMesh_cwids")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="green"]
+shape = SubResource("CylinderShape3D_xprj0")
+
+[node name="blue" type="StaticBody3D" parent="."]
+transform = Transform3D(0.99, 0, 0, 0, 0.762, 0, 0, 0, 0.99, 0, 1.19626, -0.938501)
+script = ExtResource("2_l4p3g")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="blue"]
+material_override = ExtResource("5_esd6a")
+mesh = SubResource("CylinderMesh_cwids")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="blue"]
+shape = SubResource("CylinderShape3D_xprj0")
+
+[node name="StaticBody3D2" type="StaticBody3D" parent="."]
+transform = Transform3D(0.925, 0, 0, 0, 0.925, 0, 0, 0, 0.925, 0, 1.22537, 1.0615)
+script = ExtResource("7_rhlq0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2"]
+mesh = SubResource("CylinderMesh_cwids")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2"]
+shape = SubResource("CylinderShape3D_xprj0")
+
+[node name="StaticBody3D4" type="StaticBody3D" parent="StaticBody3D2"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -2.16216)
+script = ExtResource("7_rhlq0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D2/StaticBody3D4"]
+mesh = SubResource("CylinderMesh_cwids")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D2/StaticBody3D4"]
+shape = SubResource("CylinderShape3D_xprj0")
+
+[node name="StaticBody3D3" type="StaticBody3D" parent="."]
+transform = Transform3D(0.925, 0, 0, 0, 0.925, 0, 0, 0, 0.925, 0, 1.22537, 0.0614986)
+script = ExtResource("7_rhlq0")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D3"]
+mesh = SubResource("CylinderMesh_cwids")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D3"]
+shape = SubResource("CylinderShape3D_xprj0")
+
+[node name="SpotLight3D" type="SpotLight3D" parent="."]
+transform = Transform3D(-4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 4.07028, 1.37896, 0)
+spot_range = 4.832
+spot_attenuation = -0.3
+spot_angle = 36.43

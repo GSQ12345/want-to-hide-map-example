@@ -14,7 +14,7 @@ material = ExtResource("2_s6ecb")
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_30f5m"]
 
-[node name="part a" type="Node3D"]
+[node name="color generator or smt" type="Node3D"]
 script = ExtResource("1_86x7i")
 
 [node name="StaticBody3D" type="StaticBody3D" parent="."]

@@ -18,6 +18,10 @@ var ChangeScene: String = ""
 
 @export var OnlyOpen: bool
 
+@export var OpenOnGenerators: Array[Node3D]
+
+@export var OpenOnColorGeneratorOrSmt: Array[Node3D]
+
 var AI: Node3D = null
 
 var GiveLore: bool = false
