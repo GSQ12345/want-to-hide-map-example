@@ -10,12 +10,12 @@ config_version=5
 
 [application]
 
-config/name="New Game Project"
+config/name="Want To Hide Custom Map"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
 [dotnet]
 
-project/assembly_name="New Game Project"
+project/assembly_name="Want To Hide Custom Map"
 
 [editor_plugins]
 
