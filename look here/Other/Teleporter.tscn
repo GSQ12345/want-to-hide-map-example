@@ -1,0 +1,37 @@
+[gd_scene load_steps=8 format=3 uid="uid://cbvhi84rugr0t"]
+
+[ext_resource type="Script" uid="uid://bd5jus36e6ro6" path="res://scripts/hide on export.gd" id="1_v1kwx"]
+[ext_resource type="Script" uid="uid://wcx8f8nks6jo" path="res://scripts/teleporter.gd" id="1_xa84i"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_igsd3"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_v1kwx"]
+transparency = 1
+albedo_color = Color(0, 1, 0, 0.152941)
+
+[sub_resource type="BoxMesh" id="BoxMesh_xa84i"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_xa84i"]
+transparency = 1
+albedo_color = Color(1, 1, 0, 0.266667)
+
+[sub_resource type="TextMesh" id="TextMesh_qhgxf"]
+text = "TP"
+
+[node name="Teleporter" type="Area3D"]
+script = ExtResource("1_xa84i")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+shape = SubResource("BoxShape3D_igsd3")
+debug_fill = false
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+material_override = SubResource("StandardMaterial3D_v1kwx")
+mesh = SubResource("BoxMesh_xa84i")
+skeleton = NodePath("../CollisionShape3D")
+script = ExtResource("1_v1kwx")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="MeshInstance3D"]
+transform = Transform3D(4.47, 0, 0, 0, 4.47, 0, 0, 0, 4.47, 0, 0, 0)
+material_override = SubResource("StandardMaterial3D_xa84i")
+mesh = SubResource("TextMesh_qhgxf")
