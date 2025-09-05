@@ -3,5 +3,5 @@
 
 ## License
 
-This project is licensed under the Creative Commons BY-NC-ND 4.0 License.  
+This project is licensed under **Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)**.  
 See the [LICENSE](./LICENSE) file for details.
